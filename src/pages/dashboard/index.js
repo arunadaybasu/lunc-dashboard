@@ -77,9 +77,9 @@ const DashboardDefault = () => {
         <Grid container rowSpacing={4.5} columnSpacing={2.75}>
             {/* row 1 */}
             <Grid item xs={12} sx={{ mb: -2.25 }}>
-                <Typography variant="h5">Dashboard</Typography>
+                <Typography variant="h2">Terra Luna Classic Dashboard</Typography>
             </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
+            {/*<Grid item xs={12} sm={6} md={4} lg={3}>
                 <AnalyticEcommerce title="Total Page Views" count="4,42,236" percentage={59.3} extra="35,000" />
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -90,15 +90,16 @@ const DashboardDefault = () => {
             </Grid>
             <Grid item xs={12} sm={6} md={4} lg={3}>
                 <AnalyticEcommerce title="Total Sales" count="$35,078" percentage={27.4} isLoss color="warning" extra="$20,395" />
-            </Grid>
+            </Grid>*/}
 
             <Grid item md={8} sx={{ display: { sm: 'none', md: 'block', lg: 'none' } }} />
 
             {/* row 2 */}
-            <Grid item xs={12} md={7} lg={8}>
+            <Grid item xs={12} md={12} lg={12}>
                 <Grid container alignItems="center" justifyContent="space-between">
                     <Grid item>
-                        <Typography variant="h5">Unique Visitor</Typography>
+                        <Typography variant="h4">Circulating Supply</Typography>
+                        <Typography variant="h5">Time Format: UTC (GMT +0)</Typography>
                     </Grid>
                     <Grid item>
                         <Stack direction="row" alignItems="center" spacing={0}>
@@ -127,7 +128,7 @@ const DashboardDefault = () => {
                     </Box>
                 </MainCard>
             </Grid>
-            <Grid item xs={12} md={5} lg={4}>
+            {/*<Grid item xs={12} md={5} lg={4}>
                 <Grid container alignItems="center" justifyContent="space-between">
                     <Grid item>
                         <Typography variant="h5">Income Overview</Typography>
@@ -145,13 +146,13 @@ const DashboardDefault = () => {
                     </Box>
                     <MonthlyBarChart />
                 </MainCard>
-            </Grid>
+            </Grid>*/}
 
             {/* row 3 */}
-            <Grid item xs={12} md={7} lg={8}>
+            <Grid item xs={12} md={12} lg={12}>
                 <Grid container alignItems="center" justifyContent="space-between">
                     <Grid item>
-                        <Typography variant="h5">Recent Orders</Typography>
+                        <Typography variant="h4">Circulating Supply (Per Minute)</Typography>
                     </Grid>
                     <Grid item />
                 </Grid>
@@ -159,7 +160,7 @@ const DashboardDefault = () => {
                     <OrdersTable />
                 </MainCard>
             </Grid>
-            <Grid item xs={12} md={5} lg={4}>
+            {/*<Grid item xs={12} md={5} lg={4}>
                 <Grid container alignItems="center" justifyContent="space-between">
                     <Grid item>
                         <Typography variant="h5">Analytics Report</Typography>
@@ -183,10 +184,10 @@ const DashboardDefault = () => {
                     </List>
                     <ReportAreaChart />
                 </MainCard>
-            </Grid>
+            </Grid>*/}
 
             {/* row 4 */}
-            <Grid item xs={12} md={7} lg={8}>
+            {/*<Grid item xs={12} md={7} lg={8}>
                 <Grid container alignItems="center" justifyContent="space-between">
                     <Grid item>
                         <Typography variant="h5">Sales Report</Typography>
@@ -339,7 +340,7 @@ const DashboardDefault = () => {
                         </Button>
                     </Stack>
                 </MainCard>
-            </Grid>
+            </Grid>*/}
         </Grid>
     );
 };

@@ -1,8 +1,8 @@
 {
-    "name": "mantis-free-react-admin-template",
-    "version": "1.1.1",
+    "name": "lunc-dashboard",
+    "version": "1.0.1",
     "private": true,
-    "homepage": "https://mantisdashboard.io/free",
+    "homepage": "",
     "dependencies": {
         "@ant-design/colors": "^6.0.0",
         "@ant-design/icons": "^4.7.0",
@@ -16,6 +16,7 @@
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^14.4.3",
         "apexcharts": "^3.35.5",
+        "axios": "^1.4.0",
         "formik": "^2.2.9",
         "framer-motion": "^7.3.6",
         "history": "^5.3.0",

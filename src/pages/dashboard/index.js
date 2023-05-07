@@ -133,8 +133,8 @@ const DashboardDefault = () => {
             <Grid item xs={12} md={2} lg={2}>
                 <Grid container alignItems="center" justifyContent="space-between">
                     <Grid item>
-                        <Typography variant="h4">Circulating Supply</Typography>
                         <Typography variant="h5">Last 100 Records</Typography>
+                        <Typography variant="h6">Time in YYYY-MM-DD HH:mm:ss</Typography>
                     </Grid>
                     <Grid item />
                 </Grid>

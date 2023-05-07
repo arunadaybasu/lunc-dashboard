@@ -2,3 +2,7 @@
     left: -4px !important;
     top: 2px !important;
 }
+
+.MuiList-root {
+    overflow: auto;
+}

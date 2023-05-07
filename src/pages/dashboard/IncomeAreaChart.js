@@ -26,13 +26,8 @@ const areaChartOptions = {
     }
 };
 
-var csupply1;
+var csupply1 = [];
 // const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-axios.get('http://localhost:3300/dashsupplyapi/onchain/get-csupply?format=2').then((response) => {
-    // console.log(response.data.result);
-    csupply1 = response.data.result;
-});
 
 // ==============================|| INCOME AREA CHART ||============================== //
 
@@ -97,12 +92,16 @@ const IncomeAreaChart = ({}) => {
     ]);
 
     useEffect(() => {
-        setSeries([
-            {
-                name: 'Circulating Supply',
-                data: csupply1
-            }
-        ]);
+        axios.get('http://localhost:3300/dashsupplyapi/onchain/get-csupply?format=2').then((response) => {
+            // console.log(response.data.result);
+            // csupply1 = response.data.result;
+            setSeries([
+                {
+                    name: 'Circulating Supply',
+                    data: response.data.result
+                }
+            ]);
+        });
     }, []);
 
     return <ReactApexChart options={options} series={series} type="area" height={450} />;

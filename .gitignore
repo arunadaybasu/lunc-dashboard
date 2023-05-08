@@ -107,7 +107,5 @@ dist
 *.bak
 
 #output
-build
 package-lock.json
-yarn.lock
 yarn.lock

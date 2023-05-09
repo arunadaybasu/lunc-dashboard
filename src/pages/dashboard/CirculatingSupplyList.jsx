@@ -11,7 +11,7 @@ const CirculatingSupplyList = ({}) => {
     const [csupply, setCSupply] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3300/dashsupplyapi/onchain/get-csupply?format=3').then((response) => {
+        axios.get('http://ec2-18-223-229-233.us-east-2.compute.amazonaws.com:3300/dashsupplyapi/onchain/get-csupply?format=3').then((response) => {
             // console.log(response.data.result);
             setCSupply(response.data.result);
         });

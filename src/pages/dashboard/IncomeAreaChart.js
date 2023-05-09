@@ -92,7 +92,7 @@ const IncomeAreaChart = ({}) => {
     ]);
 
     useEffect(() => {
-        axios.get('http://localhost:3300/dashsupplyapi/onchain/get-csupply?format=2').then((response) => {
+        axios.get('http://ec2-18-223-229-233.us-east-2.compute.amazonaws.com:3300/dashsupplyapi/onchain/get-csupply?format=2').then((response) => {
             // console.log(response.data.result);
             // csupply1 = response.data.result;
             setSeries([

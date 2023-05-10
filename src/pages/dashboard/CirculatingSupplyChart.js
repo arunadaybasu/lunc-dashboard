@@ -59,6 +59,7 @@ const IncomeAreaChart = ({}) => {
                 }
             },
             yaxis: {
+                show: false,
                 labels: {
                     style: {
                         colors: [secondary]

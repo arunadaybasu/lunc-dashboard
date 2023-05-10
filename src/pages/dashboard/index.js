@@ -20,7 +20,7 @@ import {
 
 // project import
 // import OrdersTable from './OrdersTable';
-import IncomeAreaChart from './IncomeAreaChart';
+import CirculatingSupplyChart from './CirculatingSupplyChart';
 // import MonthlyBarChart from './MonthlyBarChart';
 // import ReportAreaChart from './ReportAreaChart';
 // import SalesColumnChart from './SalesColumnChart';
@@ -126,7 +126,7 @@ const DashboardDefault = () => {
                 </Grid>
                 <MainCard content={false} sx={{ mt: 1.5 }}>
                     <Box sx={{ pt: 1, pr: 2 }}>
-                        <IncomeAreaChart slot={slot} />
+                        <CirculatingSupplyChart slot={slot} />
                     </Box>
                 </MainCard>
             </Grid>

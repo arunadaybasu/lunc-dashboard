@@ -6,3 +6,18 @@
 .MuiList-root {
     overflow: auto;
 }
+
+.banner-img-main-div {
+    text-align: left;
+}
+
+.banner-img-main {
+    max-width: 600px;
+    width: 87%;
+}
+
+@media only screen and (max-width: 798px) {
+  .banner-img-main {
+        width: 100%;
+    }
+}

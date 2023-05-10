@@ -6,6 +6,7 @@ import MainLayout from 'layout/MainLayout';
 
 // render - dashboard
 const DashboardDefault = Loadable(lazy(() => import('pages/dashboard')));
+const SupplyDefault = Loadable(lazy(() => import('pages/supply')));
 
 // render - sample page
 const SamplePage = Loadable(lazy(() => import('pages/extra-pages/SamplePage')));
@@ -31,13 +32,8 @@ const MainRoutes = {
             element: <Color />
         },
         {
-            path: 'dashboard',
-            children: [
-                {
-                    path: 'default',
-                    element: <DashboardDefault />
-                }
-            ]
+            path: 'supply',
+            element: <SupplyDefault />
         },
         {
             path: 'sample-page',

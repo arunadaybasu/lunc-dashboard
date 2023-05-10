@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { useState, useEffect } from 'react';
+import { defaultUrlLocal, defaultUrlGlobal } from 'config';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -33,10 +34,8 @@ var csupply1 = [];
 
 const IncomeAreaChart = ({}) => {
     const theme = useTheme();
-
     const { primary, secondary } = theme.palette.text;
     const line = theme.palette.divider;
-
     const [options, setOptions] = useState(areaChartOptions);
 
     useEffect(() => {
@@ -93,18 +92,24 @@ const IncomeAreaChart = ({}) => {
     ]);
 
     useEffect(() => {
-        axios
-            .get('http://ec2-18-223-229-233.us-east-2.compute.amazonaws.com:3300/dashsupplyapi/onchain/get-csupply?format=2')
-            .then((response) => {
-                // console.log(response.data.result);
-                // csupply1 = response.data.result;
-                setSeries([
-                    {
-                        name: 'Circulating Supply',
-                        data: response.data.result
-                    }
-                ]);
-            });
+        var defaultUrl = defaultUrlGlobal;
+        if (process.env.NODE_ENV === 'development') {
+            console.log('Dev Env - ' + defaultUrlLocal);
+            defaultUrl = defaultUrlLocal;
+        } else if (process.env.NODE_ENV === 'production') {
+            console.log('Prod Env - ' + defaultUrlGlobal);
+            defaultUrl = defaultUrlGlobal;
+        }
+        axios.get(defaultUrl + 'dashsupplyapi/onchain/get-csupply?format=2').then((response) => {
+            // console.log(response.data.result);
+            // csupply1 = response.data.result;
+            setSeries([
+                {
+                    name: 'Circulating Supply',
+                    data: response.data.result
+                }
+            ]);
+        });
     }, []);
 
     return <ReactApexChart options={options} series={series} type="area" height={450} />;
